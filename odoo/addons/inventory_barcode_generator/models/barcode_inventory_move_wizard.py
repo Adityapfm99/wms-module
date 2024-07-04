@@ -11,6 +11,7 @@ class BarcodeInventoryMoveWizard(models.TransientModel):
     quantity = fields.Float(string="Quantity", required=True, default=1.0)
 
     def action_move_inventory(self):
+        print("929292929292929292929")
         if not self.product_id or not self.location_id or not self.location_dest_id:
             raise UserError("Missing required fields for inventory move.")
 

@@ -9,6 +9,7 @@
     'author': 'Aditya',
     'depends': ['base','stock','product'],
     'data': [
+        'security/ir.model.access.csv',
         'views/product_template_views.xml',
         'security/barcode_inventory_move_security.xml',
         'report/product_barcode_report.xml',
@@ -16,7 +17,7 @@
         'views/barcode_inventory_move_wizard_view.xml',
         'views/barcode_preview_wizard_view.xml', 
         'views/inventory_views.xml',
-         'views/barcode_inventory_move_view.xml',
+        'views/barcode_inventory_move_view.xml',
         'views/barcode_inventory_move_menu.xml',
        
        
