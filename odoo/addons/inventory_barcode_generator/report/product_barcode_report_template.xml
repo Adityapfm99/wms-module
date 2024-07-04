@@ -1,0 +1,21 @@
+<odoo>
+    <template id="report_template">
+        <t t-call="web.basic_layout">
+            <t t-foreach="docs" t-as="doc">
+                <t t-call="web.external_layout">
+                    <div class="page">
+              
+                        <t t-if="doc.barcode_image">
+                            <img t-att-src="'data:image/png;base64,' + doc.barcode_image.decode('ascii')"/>
+                        </t>
+                        <t t-else="">
+                            <p>No barcode image available.</p>
+                        </t>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>
+
+

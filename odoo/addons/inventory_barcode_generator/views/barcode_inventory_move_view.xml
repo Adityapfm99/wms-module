@@ -1,0 +1,25 @@
+<odoo>
+    <data>
+        <record id="view_barcode_inventory_move_form" model="ir.ui.view">
+            <field name="name">barcode.inventory.move.form</field>
+            <field name="model">barcode.inventory.move</field>
+            <field name="arch" type="xml">
+                <form string="Barcode Inventory Move" create="false" edit="false">
+                    <group>
+                        <field name="barcode" options="{'no_create': True}"/>
+                    </group>
+                    <group>
+                        <field name="product_id"/>
+                        <field name="quantity"/>
+                        <field name="location_id" />
+                        <field name="location_dest_id"/>
+                    </group>
+                    <footer>
+                        <button string="Cancel" class="btn-secondary" special="cancel"/>
+                        <button name="action_move_inventory" type="object" string="Move Inventory" class="btn-primary"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

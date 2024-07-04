@@ -1,0 +1,22 @@
+<odoo>
+    <data>
+        <record id="view_barcode_inventory_move_wizard_form" model="ir.ui.view">
+            <field name="name">barcode.inventory.move.wizard.form</field>
+            <field name="model">barcode.inventory.move.wizard</field>
+            <field name="arch" type="xml">
+                <form string="Barcode Inventory Move Wizard">
+                    <group>
+                        <field name="product_id" readonly="1"/>
+                        <field name="location_id" readonly="1"/>
+                        <field name="location_dest_id"/>
+                        <field name="quantity"/>
+                    </group>
+                    <footer>
+                        <button name="action_move_inventory" type="object" string="Move Inventory" class="btn-primary"/>
+                        <button string="Cancel" class="btn-secondary" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

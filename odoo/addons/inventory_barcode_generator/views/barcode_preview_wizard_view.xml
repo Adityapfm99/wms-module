@@ -1,0 +1,25 @@
+<odoo>
+    <record id="view_barcode_preview_wizard_form" model="ir.ui.view">
+        <field name="name">barcode.preview.wizard.form</field>
+        <field name="model">barcode.preview.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Barcode Preview">
+                <group>
+                    <field name="product_id" invisible="1"/>
+                    <field name="barcode_image" widget="image"/>
+                </group>
+                <footer>
+                    <button string="Print" type="object" name="action_print" class="btn-primary"/>
+                    <button string="Close" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_barcode_preview_wizard" model="ir.actions.act_window">
+        <field name="name">Barcode Preview</field>
+        <field name="res_model">barcode.preview.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+</odoo>

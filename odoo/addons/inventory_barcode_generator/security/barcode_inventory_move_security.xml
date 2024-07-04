@@ -1,0 +1,25 @@
+<odoo>
+    <data noupdate="1">
+        <!-- Access rights for barcode inventory move wizard -->
+        <record id="access_barcode_inventory_move_wizard_user" model="ir.model.access">
+            <field name="name">barcode.inventory.move.wizard user</field>
+            <field name="model_id" ref="inventory_barcode_generator.model_barcode_inventory_move_wizard"/>
+            <field name="group_id" ref="base.group_user"/>
+            <field name="perm_read" eval="1"/>
+            <field name="perm_write" eval="1"/>
+            <field name="perm_create" eval="1"/>
+            <field name="perm_unlink" eval="0"/>
+        </record>
+
+        <!-- Access rights for barcode preview wizard -->
+        <record id="access_barcode_preview_wizard_user" model="ir.model.access">
+            <field name="name">barcode.preview.wizard user</field>
+            <field name="model_id" ref="inventory_barcode_generator.model_barcode_preview_wizard"/>
+            <field name="group_id" ref="base.group_user"/>
+            <field name="perm_read" eval="1"/>
+            <field name="perm_write" eval="1"/>
+            <field name="perm_create" eval="1"/>
+            <field name="perm_unlink" eval="0"/>
+        </record>
+    </data>
+</odoo>

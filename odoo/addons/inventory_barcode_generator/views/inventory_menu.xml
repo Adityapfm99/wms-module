@@ -1,0 +1,18 @@
+<odoo>
+    <data>
+        <!-- Define the action for barcode inventory move -->
+        <record id="action_barcode_inventory_move" model="ir.actions.act_window">
+            <field name="name">Barcode Inventory Move</field>
+            <field name="res_model">barcode.inventory.move</field>
+            <field name="view_mode">form</field>
+             <field name="view_id" ref="view_barcode_inventory_move_form"/>
+            <field name="target">new</field>
+        </record>
+
+        <!-- Define the parent menu item for Scan Barcode -->
+        <menuitem id="menu_scan_barcode_operations" name="Scan Barcodes" parent="stock.menu_stock_warehouse_mgmt" sequence="10"/>
+
+        <!-- Define the menu item for barcode inventory move under Scan Barcode -->
+        <menuitem id="menu_barcode_inventory_move" name="Barcode Inventory Moves" parent="menu_scan_barcode_operations" action="action_barcode_inventory_move"/>
+    </data>
+</odoo>
