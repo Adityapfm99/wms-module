@@ -9,9 +9,14 @@ class BarcodeInventoryMoveWizard(models.TransientModel):
     location_id = fields.Many2one('stock.location', string="Source Location", required=True)
     location_dest_id = fields.Many2one('stock.location', string="Destination Location", required=True)
     quantity = fields.Float(string="Quantity", required=True, default=1.0)
+    manual_entry = fields.Boolean(string='Manual')
+
+    @api.onchange('manual_entry')
+    def _onchange_manual_entry(self):
+        if self.manual_entry:
+            self.barcode = False
 
     def action_move_inventory(self):
-        print("929292929292929292929")
         if not self.product_id or not self.location_id or not self.location_dest_id:
             raise UserError("Missing required fields for inventory move.")
 

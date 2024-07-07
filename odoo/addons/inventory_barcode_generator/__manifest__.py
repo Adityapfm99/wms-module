@@ -19,7 +19,7 @@
         'views/inventory_views.xml',
         'views/barcode_inventory_move_view.xml',
         'views/barcode_inventory_move_menu.xml',
-       
+        # 'views/inventory_overview_view.xml',
        
     ],
     'installable': True,

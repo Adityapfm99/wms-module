@@ -6,7 +6,7 @@
             <field name="res_model">barcode.inventory.move</field>
             <field name="view_mode">form</field>
             <field name="view_id" ref="view_barcode_inventory_move_form"/>
-            <field name="target">new</field>
+             <field name="target">new</field>
         </record>
 
         <!-- Define the menu item -->

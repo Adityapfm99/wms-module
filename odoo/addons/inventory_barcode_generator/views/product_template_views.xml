@@ -8,7 +8,6 @@
             <field name="arch" type="xml">
                 <xpath expr="//sheet" position="inside">
                 <button name="action_open_barcode_preview" type="object" string="Preview Barcode" class="oe_highlight"/>
-                <!-- <button name="action_print_barcode" type="object" string="Print Barcode2" class="oe_highlight"/> -->
                     
                 </xpath>
             </field>

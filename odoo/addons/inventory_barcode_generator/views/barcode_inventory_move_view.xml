@@ -5,6 +5,9 @@
             <field name="model">barcode.inventory.move</field>
             <field name="arch" type="xml">
                 <form string="Scan Barcode" create="false" edit="false">
+                <group>
+                        <field name="move_type" widget="radio"/>
+                    </group>
                     <group>
                         <field name="location_dest_id" required="1"/>
                     </group>
@@ -24,7 +27,7 @@
                     </group>
                     <footer>
                         <button string="Cancel" class="btn-secondary" special="cancel"/>
-                        <button name="action_move_inventory1" type="object" string="Move Inventory1" class="btn-primary"/>
+                        <button name="action_move_inventory1" type="object" string="Validate" class="btn-primary"/>
                     </footer>
                 </form>
             </field>

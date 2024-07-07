@@ -1,5 +1,7 @@
 from odoo import models, fields, api
 import base64
+import sys
+sys.path.append('/cloudclusters/odoo/odoo/venv/lib/python3.10/site-packages')
 import barcode
 import os
 from barcode.writer import ImageWriter
@@ -27,7 +29,7 @@ class ProductTemplate(models.Model):
                 record.barcode_image = base64.b64encode(buffer.getvalue())
             else:
                 record.barcode_image = False
-    
+                
     def action_print_barcode(self):
         _logger.info("Printing barcode for product: %s", self.name)
         for record in self:
